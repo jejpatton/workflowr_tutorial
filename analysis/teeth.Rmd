@@ -1,0 +1,24 @@
+---
+title: "teeth"
+author: "Jaeda Patton"
+date: "2019-04-23"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r}
+teeth <- read.csv("data/teeth.csv", row.names=1)
+head(teeth)
+boxplot(len~dose, data=teeth)
+boxplot(len~supp, data=teeth)
+boxplot(len~dose+supp, data=teeth)
+```
+
+Some more analysis
+```{r}
+rnorm(3)
+
+```
